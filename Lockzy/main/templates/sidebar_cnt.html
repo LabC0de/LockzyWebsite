@@ -1,0 +1,7 @@
+<ul>
+    {% for link in subarticles.article_set.all %}
+    {% with lnk=subarticles.path_to_related_links_html|add:link.url_additum %}
+    <li><a href={{lnk}}>{{link.link_text}}</a></li>
+    {% endwith %}
+    {% endfor %}
+</ul>
